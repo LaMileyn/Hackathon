@@ -1,0 +1,131 @@
+.chat {
+  display: flex;
+  gap: 84px;
+
+  .container {
+    width: 100%;
+    border-radius: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 40px;
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+
+  .body {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 16px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-noonday);
+      border-radius: 5px;
+      border: 3px solid var(--color-noonday)
+    }
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: auto 72px;
+    gap: 8px;
+    padding-bottom: 80px;
+
+    .btnSend {
+      height: 100%;
+      border: none;
+      background: var(--color-brand-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .1s all ease-out;
+
+      &:hover {
+        background: #E4F2F8;
+        color: var(--color-brand-light);
+      }
+    }
+
+    input {
+      border-radius: 8px;
+      border: none;
+      padding: 16px 24px;
+      width: 100%;
+      color: grey;
+    }
+  }
+}
+
+.containerBeforePeople {
+  padding-top: 40px;
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 24px;
+  border-right: 1px solid #E0E9EC;
+}
+
+.person.active {
+  > div {
+    border: 2px solid var(--color-brand-light);
+    border-radius: 50%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+    }
+  }
+}
+
+.personExtra {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--color-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderChat{
+  display: grid;
+  place-items: center;
+  height: 100%;
+  h2{
+    margin: 40px 0px 24px 0px;
+  }
+  p{
+    color: #818990;
+    font-size: 16px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

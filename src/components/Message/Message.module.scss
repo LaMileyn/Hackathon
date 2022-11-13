@@ -1,0 +1,102 @@
+.container{
+  margin-bottom: 16px;
+  img{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+  }
+  .message{
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    width: fit-content;
+    max-width: 600px;
+  }
+  .message.owner{
+    margin-left: auto;
+  }
+  .right{
+    background: white;
+    border-radius: 7px;
+    position: relative;
+    padding: 16px 24px;
+    color: var(--color-day);
+    p{
+      padding-bottom: 16px;
+    }
+    .time{
+      color: #C1CCD3;
+    }
+  }
+  .time{
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
+    font-size: 11px;
+  }
+  .message.owner .right{
+    background-color: var(--color-brand-light);
+    p{
+      color: white;
+    }
+    .time{
+      color: white;
+    }
+  }
+}
+.currency{
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    button{
+      background: none;
+      color: var(--color-brand-light);
+      border: none;
+    }
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: 40px 75px 75px;
+    align-items: center;
+    gap: 27px;
+    text-align: center;
+    padding-bottom: 16px;
+    span{
+      color: var(--color-noonday);
+    }
+    div{
+      font-weight: 500;
+    }
+  }
+  .currencyPhoto{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-brand-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .exchange{
+    padding: 15px 23px;
+    border-radius: 8px;
+    border: 1px solid var(--color-brand-light);
+    background: none;
+    color: var(--color-brand-light);
+    cursor: pointer;
+    width: 100%;
+    transition: .1s all ease-out;
+    margin-top: 35px;
+    &:hover{
+      color: white;
+      background: var(--color-brand-light);
+    }
+  }
+}
