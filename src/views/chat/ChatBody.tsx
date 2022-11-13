@@ -47,7 +47,10 @@ const ChatBody: FC<IProps> = (props) => {
                 ))
                 }
             </div>
-            <Controlls/>
+            {
+                user?.role === "CLIENT" && <Controlls/>
+            }
+
         </div>
     );
 }
